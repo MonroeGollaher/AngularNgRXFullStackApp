@@ -15,6 +15,8 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TrainingComponent } from './training/training/training.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 
@@ -27,7 +29,9 @@ import { AppRoutingModule } from './app-routing.module';
     NewTrainingComponent,
     PastTrainingComponent,
     WelcomeComponent,
-    TrainingComponent
+    TrainingComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
