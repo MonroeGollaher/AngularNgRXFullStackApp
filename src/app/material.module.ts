@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatNativeDateModule } from '@angular/material/core'
 import { MatDatepickerModule } from "@angular/material/datepicker"
 import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatSidenavModule } from '@angular/material/sidenav/'
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 
 
@@ -17,7 +19,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     MatIconModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule,
@@ -26,7 +30,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox'
     MatIconModule,
     MatNativeDateModule,
     MatDatepickerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatToolbarModule
   ]
 })
 
