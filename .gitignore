@@ -58,3 +58,4 @@ src/polyfills.ts
 src/test.ts
 karma.conf.js
 src/app/navigation/header/header.component.ts
+src/environments/environment.ts
