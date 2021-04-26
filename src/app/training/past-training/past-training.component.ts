@@ -1,21 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { Exercise } from '../../models/exercise.model';
 import { TrainingService } from 'src/app/services/training.service';
+import { MatSort } from '@angular/material/sort'
 
 @Component({
   selector: 'app-past-training',
   templateUrl: './past-training.component.html',
   styleUrls: ['./past-training.component.css']
 })
-export class PastTrainingComponent implements OnInit {
+export class PastTrainingComponent implements OnInit, AfterViewInit {
   displayedColumns = ['date', 'name', 'calories', 'duration', 'state']
   dataSource = new MatTableDataSource<Exercise>()
+
+  @ViewChild(MatSort) sort: MatSort
 
   constructor(private trainingService: TrainingService) {}
 
   ngOnInit(): void {
     this.dataSource.data = this.trainingService.getCompletedOrCancelledExercises()
+  }
+
+  ngAfterViewInit(){
+    this.dataSource.sort = this.sort
   }
 
 }
