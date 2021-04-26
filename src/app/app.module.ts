@@ -19,6 +19,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 import { AuthService } from './services/auth.service';
+import { TrainingService } from './services/training.service';
 
 
 
@@ -46,7 +47,7 @@ import { AuthService } from './services/auth.service';
     FormsModule,
     MatNativeDateModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
